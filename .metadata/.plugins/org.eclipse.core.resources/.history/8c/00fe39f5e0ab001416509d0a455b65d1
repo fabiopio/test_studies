@@ -1,0 +1,23 @@
+package fizz_buzz.fizz_buzz;
+
+public class Check_number {
+	public String result;
+
+	public Check_number(int number){
+		if (number % 3 == 0) {
+			result = "Fizz";
+			System.out.println(result);
+		}
+
+		if (number % 5 == 0){
+			result = "Buzz";
+			System.out.println(result);
+		}
+		
+		if ((number %5 != 0) && (number %3 !=0)){
+			System.out.println("Is not divisible by 3 or 5");
+		}
+		
+		
+	}
+}

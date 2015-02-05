@@ -1,0 +1,19 @@
+package fizz_buzz.fizz_buzz;
+
+import junit.framework.TestCase;
+
+public class CheckNumberTest extends TestCase {
+	String check_fizz = "Fizz";
+	String check_buzz = "Buzz";
+
+	public void testCheck_number_fizz() {
+		CheckNumber check = new CheckNumber(3);
+		// assertEquals(check_fizz, result);
+	}
+
+	public void testCheck_number_buzz() {
+		CheckNumber check = new CheckNumber(5);
+		// assertEquals(check_fizz, result);
+	}
+
+}

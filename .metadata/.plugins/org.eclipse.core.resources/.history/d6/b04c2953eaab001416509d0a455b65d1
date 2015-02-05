@@ -1,0 +1,17 @@
+package fizz_buzz.fizz_buzz;
+
+static import org.junit.Assert;
+import org.junit.Test;
+
+
+public class NumberCheckerTest {
+	
+	@Test
+	public void returnsBuzzForThree() {
+		NumberChecker checker = new NumberChecker();
+		String result = checker.check(3);
+		Assert.assertEquals("Fizz", result);
+		
+	}
+
+}

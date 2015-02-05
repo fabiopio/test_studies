@@ -1,0 +1,20 @@
+package fizz_buzz.fizz_buzz;
+
+public class Check_number {
+
+	public Check_number(int number) {
+		if (number % 3 == 0) {
+			System.out.println("Fizz");
+		}
+
+		if (number % 5 == 0) {
+			System.out.println("Buzz");
+		}
+		
+		if (number %5 == 0 && number %3 ==0){
+			System.out.println("Fizz Buzz);
+		}
+
+	}
+}
+

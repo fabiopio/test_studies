@@ -1,0 +1,58 @@
+package fizz_buzz.fizz_buzz;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class NumberCheckerTest {
+	
+	@Before
+	public void setUp(){
+	
+	}
+	
+	@Test
+	public void returnsFizzForThree() {
+		NumberChecker checker = new NumberChecker();
+		String result = checker.check(3);
+		assertEquals("Fizz", result);		
+	}
+	
+	@Test
+	public void returnsFizzForMultiplesOfThree() {
+		NumberChecker checker = new NumberChecker();
+		String result = checker.check(6);
+		assertEquals("Fizz", result);
+	}
+	
+	@Test
+	public void returnsBuzzForFive(){
+		NumberChecker checker = new NumberChecker();
+		String result = checker.check(5);
+		assertEquals("Buzz", result);
+	}
+
+	@Test
+	public void returnsBuzzForTen(){
+		NumberChecker checker = new NumberChecker();
+		String result = checker.check(10);
+		assertEquals("Buzz", result);
+	}
+
+	@Test
+	public void returnsFizzBuzzForFifiteen(){
+		NumberChecker checker = new NumberChecker();
+		String result = checker.check(15);
+		assertEquals("Fizz Buzz", result);
+	}
+	
+	@Test
+	public void returnsTheSameForOne(){
+		NumberChecker checker = new NumberChecker();
+		String result = checker.check(1);
+		assertEquals("1", result);
+	}
+	
+}

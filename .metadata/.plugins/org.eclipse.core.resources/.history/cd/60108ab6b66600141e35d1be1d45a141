@@ -1,0 +1,80 @@
+package tests_fpio.tests_fpio;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class practical_testing {
+	
+	WebDriver driver = new FirefoxDriver();
+
+	@Before
+	/*Open the test page
+	 maximize the window
+	 */
+	public void setUp() throws Exception {
+
+		driver.get("http://localhost:3000/#4d310fd6a7ff10ee59f71790043d3f170ad3dc4b");
+		driver.manage().window().maximize();
+	}
+
+	//@Test
+	//Check presence of elements
+	public void CheckElements() throws InterruptedException {
+		driver.findElement(By.className("logo")).isDisplayed();
+		driver.findElement(By.id("filter-repo")).isDisplayed();
+		driver.findElement(By.id("export_csv")).isDisplayed();
+		driver.findElement(By.id("open_modal_issue")).isDisplayed();
+		driver.findElement(By.cssSelector("div:nth-of-type(2) > div:nth-of-type(1) > div > div:nth-of-type(1)")).isDisplayed();
+		driver.findElement(By.cssSelector("div:nth-of-type(2) > div:nth-of-type(2) > div > div:nth-of-type(1)")).isDisplayed();
+		driver.findElement(By.cssSelector("div:nth-of-type(2) > div:nth-of-type(3) > div > div:nth-of-type(1)")).isDisplayed();
+		driver.findElement(By.cssSelector("div:nth-of-type(2) > div:nth-of-type(4) > div > div:nth-of-type(1)")).isDisplayed();
+		driver.findElement(By.id("4-done")).isDisplayed();	
+	}
+
+	//@Test
+	//Creating a new issue
+	public void Createissue() throws InterruptedException {
+		driver.findElement(By.id("open_modal_issue")).click();
+		//...
+	}
+	
+	//@Test
+	//Change the repositories (basics)
+	public void ChangeRepository() throws InterruptedException {
+		driver.findElement(By.id("filter-repo")).sendKeys("pixelated-user-agent");	
+		Thread.sleep(1000);
+		driver.findElement(By.id("filter-repo")).sendKeys("pixelated-platform");	
+		Thread.sleep(1000);
+		driver.findElement(By.id("filter-repo")).sendKeys("pixelated-dispatcher");	
+		Thread.sleep(1000);
+		driver.findElement(By.id("filter-repo")).sendKeys("All repositories");	
+		Thread.sleep(1000);
+	}
+	
+	@Test
+	//Move tabs
+	public void DragAndDrop() throws InterruptedException {
+		Thread.sleep(5000);
+		WebElement element = driver.findElement(By.id("1-ready")); 
+
+		WebElement target = driver.findElement(By.id("2-development"));
+		(new Actions(driver)).dragAndDrop(element, target).perform();
+		Thread.sleep(5000);
+		
+	}
+	
+	@After
+	public void tearDown() throws Exception {
+		driver.quit();
+	}
+	
+
+}

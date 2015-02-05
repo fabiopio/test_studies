@@ -1,0 +1,14 @@
+package fizz_buzz.fizz_buzz;
+
+import junit.framework.TestCase;
+
+public class NumberCheckerTest extends TestCase {
+	public void returnsBuzzForThree()
+	{
+		NumberChecker checker = new NumberChecker();
+		String result = checker.check(3);
+		assertEquals("Fizz", result);
+		
+	}
+
+}

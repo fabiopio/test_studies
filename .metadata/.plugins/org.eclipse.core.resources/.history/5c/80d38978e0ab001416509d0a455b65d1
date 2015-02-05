@@ -1,0 +1,22 @@
+package fizz_buzz.fizz_buzz;
+
+import org.junit.Test;
+
+import junit.framework.TestCase;
+
+public class Check_numberTest extends TestCase {	
+
+	public void testCheck_number_fizz(String result) {
+		Check_number check = new Check_number(3);
+		assertEquals(result, "Fizz");
+	}
+
+	public void testCheck_number_buzz(String result) {
+		Check_number check = new Check_number(5);
+		assertEquals(result, "Buzz");
+	}
+
+
+
+
+}

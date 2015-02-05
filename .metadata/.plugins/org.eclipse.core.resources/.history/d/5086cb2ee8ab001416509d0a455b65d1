@@ -1,0 +1,12 @@
+package fizz_buzz.fizz_buzz;
+
+import junit.framework.TestCase;
+
+public class NumberCheckerTest extends TestCase {
+	public void returnsBuzzForThree()
+	{
+		
+		
+	}
+
+}

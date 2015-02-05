@@ -1,0 +1,17 @@
+package fizz_buzz.fizz_buzz;
+import java.util.Scanner;
+
+public class Say_fizz_buzz {
+
+	public static void main (String[] args) {
+		Scanner type = new Scanner(System.in);
+		
+		System.out.println("Type a digit:");
+		int number  = type.nextInt();
+		
+		Check_number check = new Check_number(number);	
+		
+	}
+	
+	
+}

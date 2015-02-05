@@ -1,0 +1,15 @@
+package fizz_buzz.fizz_buzz;
+
+public class NumberChecker {
+	
+	public String check(int number) {
+		if (number == 3){
+			return "Fizz";
+		}
+		
+		return "Buzz";
+	}
+
+	
+	
+}
